@@ -203,6 +203,88 @@ footer.copyright{
   text-align: center;
 
 }
+/*the experience */
+.experience {
+  background: #000;
+  color: #fff;
+}
+
+.experience .heading h2 {
+  color: #009e66;
+}
+
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 2px;
+  background-color: #009e66;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -1px;
+}
+
+.timeline-item {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+.timeline-item:nth-child(odd) {
+  left: 0;
+}
+
+.timeline-item:nth-child(even) {
+  left: 50%;
+}
+
+.timeline-content {
+  padding: 20px 30px;
+  background-color: #111;
+  position: relative;
+  border-radius: 6px;
+}
+
+.timeline-dot {
+  width: 20px;
+  height: 20px;
+  background-color: #009e66;
+  border-radius: 50%;
+  position: absolute;
+  top: 15px;
+  right: -10px;
+  z-index: 1;
+}
+
+.timeline-item:nth-child(even) .timeline-dot {
+  left: -10px;
+}
+
+.timeline-content h3 {
+  color: #009e66;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.timeline-content h4 {
+  color: #fff;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.timeline-content p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
 /* macking the site responsive*/
 @media (max-width: 991px) {
   header,
@@ -346,4 +428,26 @@ footer.copyright{
         align-items: center;
         flex-direction:column;
     }
+    .timeline::after {
+      left: 31px;
+  }
+  
+  .timeline-item {
+      width: 100%;
+      padding-left: 70px;
+      padding-right: 25px;
+  }
+  
+  .timeline-item:nth-child(even) {
+      left: 0%;
+  }
+  
+  .timeline-content {
+      padding: 15px 20px;
+  }
+  
+  .timeline-dot {
+      left: 21px;
+  }
 }
+
